@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    
+      <ion-searchbar class="padding" (ionInput)="getItems($event)"></ion-searchbar>
+    
+  </ion-navbar>
+</ion-header>
+
+
+
+
+
+<ion-content padding>
+  <img src="" alt="Images from friends only">
+
+  <ion-list>
+  <ion-item *ngFor="let item of items | slice:0:4">
+    <h2 (click)="itemTapped($event, item)">{{ item }}</h2>
+  </ion-item>
+  <p *ngIf="items.length > 7">Too much items</p>
+  <p *ngIf="items.length < 1">no Items</p>
+</ion-list>
+
+</ion-content>

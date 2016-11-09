@@ -1,0 +1,16 @@
+
+
+<ion-content>
+			<div class="available-scroller"  >
+ 			
+			
+			<ion-img  class="imges" *ngFor="let post of posts" [src]="post.picture.medium"></ion-img>
+	    	
+	    	
+	    	</div>
+	    	
+	<div #map id="map"></div>  
+	<button class="leftb" (click)="Capture()">Capture</button>
+	<button class="rightb" (click)="Photofeed()">PhotoFeed</button>
+</ion-content>
+  

@@ -1,0 +1,21 @@
+
+
+<ion-content padding class="photofeed">
+<ion-list class="listdisp">
+<img [src]="base64Image" *ngIf="base64Image"/>
+<ion-item *ngFor="let post of posts">
+
+<img [src]="post.picture.large" (click)="itemTapped($event, post.picture.large)" class="width"/>
+</ion-item>
+</ion-list>
+
+	<button class="leftf" (click)="Geomap()">GeoMap</button>
+	<button class="rightf" (click)="Capture()">Capture</button>
+
+<ion-infinite-scroll (infinite)="doInfinite($event)">
+   <ion-infinite-scroll-content></ion-infinite-scroll-content>
+ </ion-infinite-scroll>
+
+</ion-content>
+
+
